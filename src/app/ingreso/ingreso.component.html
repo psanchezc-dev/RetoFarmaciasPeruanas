@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<main class="container h-100">
+  <div class="row h-100">
+    <div class="col-6 offset-3 my-auto">
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Marcar Ingreso</h5>
+          <form>
+            <div class="form-group">
+              <button type="button" class="btn btn-lg btn-success btn-block" role="button" (click)=marcarIngreso()>
+                <i class="fas fa-check"></i>Confirmar
+              </button>
+            </div>
+
+            <div class="form-group text-center mt-5">
+              <label for="txtUsuario">Su salida podra marcarla a partir de :</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="far fa-clock"></i>
+                  </div>
+                </div>
+                <p type="text" class="form-control text-center" id="txtUsuario" name="txtUsuario">"16:00:15" </p>
+                <button type="button" class="btn btn-danger" (click)=marcarSalida()>Marcar
+                  Salida</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <button type="button" class="btn btn-lg btn-info btn-block" (click)=marcarSalidaEmergencia()>
+                Marcar salida por Emergencia
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<app-footer></app-footer>

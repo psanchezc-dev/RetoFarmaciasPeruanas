@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-md navbar-dark nav-fondo sticky-top">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/ingreso">Farmacias Peruanas S.A.</a>
+    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#menu"
+      aria-controls="menu" aria-expanded="false" aria-label="Alternar navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/ingreso" routerLinkActive="active">Marcar Ingreso</a>
+        </li>
+        <li *ngIf="loginService.hasRole('ROLE_ADMIN')" class="nav-item">
+          <a class="nav-link" routerLink="/usuarios" routerLinkActive="active">Usuarios</a>
+        </li>
+        <li *ngIf="loginService.hasRole('ROLE_ADMIN')" class="nav-item">
+          <a class="nav-link" routerLink="/reportes" routerLinkActive="active">Reportes</a>
+        </li>
+      </ul>
+      <div class="row">
+        <div class="col">
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn text-white" id="dropdownBasic1" ngbDropdownToggle><i class="fas fa-user-circle"></i>
+              {{loginService.login.username}} </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem routerLink="/usuarios/resetPass"><i class="fas fa-key"></i> Cambiar Clave</button>
+              <div class="dropdown-divider"></div>
+              <button ngbDropdownItem (click)="salirSistema()"><i class="fas fa-sign-out-alt"></i>
+                Salir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

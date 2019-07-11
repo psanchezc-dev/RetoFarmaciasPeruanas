@@ -1,0 +1,34 @@
+<app-header></app-header>
+
+<main class="container">
+  <nav class="breadcrumb mt-3">
+    <a class="breadcrumb-item">Reportes</a>
+    <span class="breadcrumb-item active">Reportes de ingreso</span>
+  </nav>
+
+  <table class="table table-bordered table-hovered table-striped">
+    <thead class="bg-primary text-white">
+      <tr>
+        <th class="text-center">ID</th>
+        <th class="text-center">USUARIO</th>
+        <th class="text-center">FECHA INGRESO</th>
+        <th class="text-center">HORA ENTRADA</th>
+        <th class="text-center">HORA SALIDA ESTIMADA</th>
+        <th class="text-center">HORA SALIDA MARCADA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reporte of reportes">
+        <td class="text-center">{{reporte.id}}</td>
+        <td class="text-center">{{reporte.cod_usuario}}</td>
+        <td class="text-center">{{reporte.fecha_registro}}</td>
+        <td class="text-center">{{reporte.hora_registro}}</td>
+        <td class="text-center">{{reporte.hora_salida_aprox}}</td>
+        <td class="text-center">{{reporte.hora_salida_marcada}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</main>
+
+<app-footer></app-footer>

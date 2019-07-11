@@ -1,0 +1,61 @@
+<app-header></app-header>
+
+<main class="container h-100">
+  <div class="row h-100">
+    <div class="col-6 offset-3 my-auto">
+      <!-- Contenido de la tarjeta -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Cambio de clave</h5>
+          <form>
+            <div class="form-group">
+              <label for="txtUsuario">Clave anterior</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-key"></i>
+                  </div>
+                </div>
+                <input type="password" class="form-control" id="txtUsuario" name="txtUsuario">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="txtContrasenia">Nueva Clave</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-key"></i>
+                  </div>
+                </div>
+                <input type="password" class="form-control" id="txtContrasenia" name="txtContrasenia">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="txtContrasenia">Repetir nueva clave</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-key"></i>
+                  </div>
+                </div>
+                <input type="password" class="form-control" id="txtContrasenia" name="txtContrasenia">
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <h6><i class="fas fa-info-circle"></i> Debe reingresar al sistema al cambiar la clave</h6>
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-lg btn-success btn-block" (click)="cambioClave()">
+                <i class="fas fa-check"></i> Confirmar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Contenido de la tarjeta -->
+    </div>
+  </div>
+</main>
+
+
+<app-footer></app-footer>

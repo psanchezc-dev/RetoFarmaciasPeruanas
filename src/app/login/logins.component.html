@@ -1,0 +1,53 @@
+<main class="container h-100">
+  <div class="row h-100">
+    <div class="col-6 offset-3 my-auto">
+      <!-- Contenido de la tarjeta -->
+      <div class="card">
+        <img src="../../assets/img/farmaciasperuanas2.png" alt="Logotipo"
+          class="img-fluid card-img-top imagen-logo align-self-center">
+        <hr class="w-75 align-self-center" />
+        <div class="card-body">
+          <h5 class="card-title text-center">Sistema de Control de Ingreso</h5>
+          <form method="post">
+            <div class="form-group">
+              <label for="username">Usuario</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-user-circle"></i>
+                  </div>
+                </div>
+                <input [(ngModel)]="login.username" type="text" class="form-control" id="username" name="username"
+                  autofocus required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Contraseña</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-key"></i>
+                  </div>
+                </div>
+                <input [(ngModel)]="login.password" type="password" class="form-control" id="password" name="password"
+                  required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="chkRecordar">
+                <label for="chkRecordar" class="custom-control-label">Recordarme</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-lg btn-danger btn-block" (click)="accesoConcedido()">
+                <i class="fas fa-check"></i> Acceder
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Contenido de la tarjeta -->
+    </div>
+  </div>
+</main>
